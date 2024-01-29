@@ -1,0 +1,40 @@
+A simplified example using animals
+
+# Base class
+class Animal:
+    def __init__(self, name, sound):
+        self.name = name
+        self.sound = sound
+
+    def make_sound(self):
+        print(f"{self.name} says {self.sound}")
+
+# Subclass 1
+class Dog(Animal):
+    def wag_tail(self):
+        print(f"{self.name} wags tail")
+
+# Subclass 2
+class Cat(Animal):
+    def purr(self):
+        print(f"{self.name} purrs")
+
+# Subclass 3
+class Bird(Animal):
+    def fly(self):
+        print(f"{self.name} flies")
+
+# Creating instances
+dog = Dog("Buddy", "Woof")
+cat = Cat("Whiskers", "Meow")
+bird = Bird("Tweety", "Tweet")
+
+# Using inherited methods
+dog.make_sound()  # Output: Buddy says Woof
+cat.make_sound()  # Output: Whiskers says Meow
+bird.make_sound()  # Output: Tweety says Tweet
+
+# Using subclass-specific methods
+dog.wag_tail()  # Output: Buddy wags tail
+cat.purr()      # Output: Whiskers purrs
+bird.fly()      # Output: Tweety flies
